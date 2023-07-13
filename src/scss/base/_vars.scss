@@ -1,20 +1,85 @@
 :root {
-	--container-width: 1200px;
+	--container-width: 1243px;
 	--container-padding: 15px;
 
-	--font-main: 'Poppins', sans-serif;
-	--font-accent: 'Playfair Display', serif;
+	--font-main: 'Inter', sans-serif;
+	--font-accent: 'Poppins', serif;
 
-	--page-bg: #fff;
-	--text-color: #000;
+	--page-bg: #160E2A;
+	--title-color: #fff;
+	--text-color: #80AB9E;
 	--accent: #ac182c;
 
-    --laptop-size: 1199px;
+	--laptop-size: 1199px;
 	--tablet-size: 959px;
 	--mobile-size: 599px;
 }
 
 .dark {
-    --page-bg: #252526;
-    --text-color: #fff;
+	--page-bg: #252526;
+	--text-color: #fff;
+}
+
+// extent styles
+
+%btn {
+	color: #fff;
+	font-family: var(--font-accent);
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 15px;
+	padding: 14px 34px;
+	position: relative;
+	margin-right: 12px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.40);
+	backdrop-filter: blur(5px);
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 5px; 
+		border: 2px solid transparent;
+		background: linear-gradient(45deg, #40AFFD, #AB2FFE) border-box;
+		-webkit-mask:
+			linear-gradient(#fff 0 0) padding-box, 
+			linear-gradient(#fff 0 0);
+		-webkit-mask-composite: destination-out;
+		mask-composite: exclude;
+		transition: all 2s;
+	}
+	&:hover {
+		background: linear-gradient(90deg, #40AFFD, #AB2FFE) border-box;
+	}
+}
+
+%title {
+	color: var(--title-color);
+	font-family: var(--font-main);
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 85px;
+		height: 85px;
+		fill: linear-gradient(180deg, #6147F8 0%, #BC5EFF 100%);
+		border-radius: 50%;
+	}
+}
+
+%text {
+	color: var(--text-color);
+	font-family: var(--font-accent);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px;
 }
