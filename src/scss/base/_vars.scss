@@ -65,13 +65,17 @@
 	font-weight: 400;
 	line-height: normal;
 	position: relative;
+	z-index: 2;
 	&::before {
 		content: '';
 		position: absolute;
 		width: 85px;
 		height: 85px;
-		fill: linear-gradient(180deg, #6147F8 0%, #BC5EFF 100%);
+		background: linear-gradient(180deg, #6147F8 0%, #BC5EFF 100%);
 		border-radius: 50%;
+		left: -35px;
+		top: -50%;
+		z-index: -2;
 	}
 }
 

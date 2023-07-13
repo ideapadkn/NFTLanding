@@ -6,6 +6,7 @@
 	background-repeat: no-repeat;
 	height: 810px;
 	z-index: 10;
+	margin-bottom: 90px;
 	&::after {
 		content: url(../../img/bg-gradient.svg);
 		position: absolute;
@@ -16,7 +17,6 @@
 		height: 300px;
 		z-index: -10;
 	}
-
 	&__row {
 		z-index: 1000;
 		.navbar {
@@ -84,7 +84,6 @@
 				}
 			}
 		}
-
 		.hero {
 			display: flex;
 			justify-content: space-around;
